@@ -14,6 +14,29 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     openGraph: {
       title: `${note.title} | NoteHub`,
       description: note.content.slice(0, 120) + '...',
+      url: `https://notehub.com/notes/${resolvedParams.id}`, 
+      images: [
+        {
+          url: 'https://ac.goit.global/fullstack/react/notehub-og-meta.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'NoteHub Cover Image',
+        },
+      ],
+    },
+  };
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const note = await fetchNoteById(resolvedParams.id);
+
+  return {
+    title: `${note.title} | NoteHub`,
+    description: note.content.slice(0, 120) + '...',
+    openGraph: {
+      title: `${note.title} | NoteHub`,
+      description: note.content.slice(0, 120) + '...',
       url: 'https://notehub.com/',
       images: [
         {

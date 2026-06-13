@@ -8,6 +8,24 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Create new note | NoteHub',
     description: 'Create a new personal note in NoteHub and save it securely.',
+    url: 'https://notehub.com/notes/action/create', 
+    images: [
+      {
+        url: 'https://ac.goit.global/fullstack/react/notehub-og-meta.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'NoteHub Cover Image',
+      },
+    ],
+  },
+};
+
+export const metadata: Metadata = {
+  title: 'Create new note | NoteHub',
+  description: 'Create a new personal note in NoteHub and save it securely.',
+  openGraph: {
+    title: 'Create new note | NoteHub',
+    description: 'Create a new personal note in NoteHub and save it securely.',
     url: 'https://notehub.com/',
     images: [
       {
